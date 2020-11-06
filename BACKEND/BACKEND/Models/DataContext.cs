@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+﻿
 
 namespace BACKEND.Models
 {
+    using System.Data.Entity;
     public class DataContext:DbContext
     {
         public DataContext():base("DefaultConnection")
@@ -13,6 +10,6 @@ namespace BACKEND.Models
                
         }
 
-        public System.Data.Entity.DbSet<BACKEND.Models.Student> Students { get; set; }
+        public DbSet<Student> Students { get; set; }
     }
 }
